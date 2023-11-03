@@ -1,0 +1,18 @@
+
+#include <iostream>
+
+using namespace std;
+
+class bank{
+    public:
+    
+    int accbalance = 1000;
+};
+
+int main()
+{
+    bank obj;
+    cout<<obj.accbalance;
+
+    return 0;
+}

@@ -1,0 +1,18 @@
+
+
+#include <stdio.h>
+
+int main()
+{
+    int num,num2;
+    
+    printf("\n enter your first number");
+    scanf("%d", &num);
+    
+    printf("\n enter your second number");
+    scanf("%d", &num2);
+    
+    printf("\n the calculated is %d",num+num2);
+    
+    return 0;
+}
