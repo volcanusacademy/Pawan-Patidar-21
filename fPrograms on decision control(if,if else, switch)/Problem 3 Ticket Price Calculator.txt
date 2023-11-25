@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int age;
+    int showtime;
+    float ticketPrice;
+
+    
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    
+    printf("Enter showtime (in 24-hour format, e.g., 1400 for 2:00 PM): ");
+    scanf("%d", &showtime);
+
+    
+    if (age < 0 || age > 120) {
+        printf("Invalid age.\n");
+        return 1;  
+    }
+
+    if (showtime < 0 || showtime > 2359) {
+        printf("Invalid showtime.\n");
+        return 1;  
+    }
+
+    
+    if (age < 12 && showtime < 1700) {
+        ticketPrice = 7.0;
+    } else if (age >= 12 && showtime < 1700) {
+        ticketPrice = 10.0;
+    } else {
+        ticketPrice = 12.0;
+    }
+
+    
+    printf("Your ticket price is: $%.2f\n", ticketPrice);
+
+    return 0;
+}
