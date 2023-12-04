@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+void printSum(int a, int b) {
+    int sum = a + b;
+    printf("Sum of %d and %d is: %d\n", a, b, sum);
+}
+
+int main() {
+    
+    int num1 = 5;
+    int num2 = 5;
+    printSum(num1, num2);
+
+    return 0;
+}

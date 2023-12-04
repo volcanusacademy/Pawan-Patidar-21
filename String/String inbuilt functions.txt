@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char string1[50], string2[50];
+
+    
+    printf("Enter a string: ");
+    fgets(string1, sizeof(string1), stdin);
+    string1[strcspn(string1, "\n")] = '\0'; 
+
+    int length = strlen(string1);
+    printf("Length of the string: %d\n", length);
+
+    
+    printf("Enter another string to concatenate: ");
+    fgets(string2, sizeof(string2), stdin);
+    string2[strcspn(string2, "\n")] = '\0'; 
+
+    strcat(string1, string2);
+    printf("Concatenated string: %s\n", string1);
+
+    
+    char copiedString[50];
+    strcpy(copiedString, string1);
+    printf("Copied string: %s\n", copiedString);
+
+   
+    if (strcmp(string1, string2) == 0) {
+        printf("The strings are equal.\n");
+    } else {
+        printf("The strings are not equal.\n");
+    }
+
+    return 0;
+}

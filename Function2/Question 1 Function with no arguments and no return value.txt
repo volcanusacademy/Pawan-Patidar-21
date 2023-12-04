@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+
+void printWelcomeMessage();
+
+
+int main() {
+  
+    printWelcomeMessage();
+
+    return 0;
+}
+
+
+void printWelcomeMessage() {
+    
+    printf("Welcome to the programming class!\n");
+}

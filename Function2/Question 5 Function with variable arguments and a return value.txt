@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdarg.h>
+
+int calculateSum(int num, ...);
+
+int main() {
+
+    int sum1 = calculateSum(3, 10, 20, 30);
+    int sum2 = calculateSum(5, 5, 10, 15, 20, 25);
+
+    printf("Sum 1: %d\n", sum1);
+    printf("Sum 2: %d\n", sum2);
+
+    return 0; 
+}
+
+int calculateSum(int num, ...) {
+    int sum = 0;
+
+    va_list args;
+
+    va_start(args, num);
+
+    for (int i = 0; i < num; i++) {
+        sum += va_arg(args, int);
+    }
+
+    va_end(args);
+
+    return sum;
+}
