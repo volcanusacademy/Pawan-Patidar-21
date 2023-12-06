@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int generateRandomNumber();
+
+int main() {
+
+    int randomNum = generateRandomNumber();
+
+    printf("Random Number: %d\n", randomNum);
+
+    return 0;
+}
+
+int generateRandomNumber() {
+    int randomNumber = rand() % 100 + 1;
+
+    return randomNumber;
+}

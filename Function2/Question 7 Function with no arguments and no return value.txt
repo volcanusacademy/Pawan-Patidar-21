@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+void GoodbyeMessage();
+
+int main() {
+
+    GoodbyeMessage();
+
+    return 0; 
+}
+
+void GoodbyeMessage() {
+    printf("Goodbye, and have a great day.\n");
+}
