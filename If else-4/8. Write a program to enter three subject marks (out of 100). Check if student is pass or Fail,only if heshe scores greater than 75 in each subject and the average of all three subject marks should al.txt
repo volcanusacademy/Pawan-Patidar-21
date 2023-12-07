@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int subject1, subject2, subject3;
+    float average;
+
+    printf("Enter marks for Subject 1: ");
+    scanf("%d", &subject1);
+
+    printf("Enter marks for Subject 2: ");
+    scanf("%d", &subject2);
+
+    printf("Enter marks for Subject 3: ");
+    scanf("%d", &subject3);
+
+    if (subject1 > 75 && subject2 > 75 && subject3 > 75) {
+
+        average = (subject1 + subject2 + subject3) / 3.0;
+
+        if (average > 80) {
+            printf("Congratulations! You have passed.\n");
+            printf("Average Marks: %.2f\n", average);
+        } else {
+            printf("Sorry, you have failed. Average marks are below 80.\n");
+        }
+    } else {
+        printf("Sorry, you have failed. Minimum score of 75 required in each subject.\n");
+    }
+
+    return 0;
+}

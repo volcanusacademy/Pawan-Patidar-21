@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double number;
+
+    printf("Enter a three-digit number: ");
+    scanf("%lf", &number);
+
+    double roundedNumber = round(number);
+
+    printf("Original number: %.2lf\n", number);
+    printf("Rounded number: %.0lf\n", roundedNumber);
+
+    return 0;
+}
