@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main() {
+    int amount;
+    
+   
+    printf("Enter the amount: ");
+    scanf("%d", &amount);
+
+    int thousand, fiveHundred, hundred, fifty, twenty, ten, five, two, one;
+
+   
+    thousand = amount / 1000;
+    amount %= 1000;
+
+    fiveHundred = amount / 500;
+    amount %= 500;
+
+    hundred = amount / 100;
+    amount %= 100;
+
+    fifty = amount / 50;
+    amount %= 50;
+
+    twenty = amount / 20;
+    amount %= 20;
+
+    ten = amount / 10;
+    amount %= 10;
+
+    five = amount / 5;
+    amount %= 5;
+
+    two = amount / 2;
+    amount %= 2;
+
+    one = amount;
+
+   
+    printf("Rs.1000 notes: %d\n", thousand);
+    printf("Rs.500 notes: %d\n", fiveHundred);
+    printf("Rs.100 notes: %d\n", hundred);
+    printf("Rs.50 notes: %d\n", fifty);
+    printf("Rs.20 notes: %d\n", twenty);
+    printf("Rs.10 notes: %d\n", ten);
+    printf("Rs.5 coins: %d\n", five);
+    printf("Rs.2 coins: %d\n", two);
+    printf("Rs.1 coins: %d\n", one);
+
+    return 0;
+}

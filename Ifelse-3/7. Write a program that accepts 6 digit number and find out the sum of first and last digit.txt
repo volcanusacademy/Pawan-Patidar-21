@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int number, firstDigit, lastDigit, sum;
+
+   
+    printf("Enter a six-digit number: ");
+    scanf("%d", &number);
+
+    
+    if (number >= 100000 && number <= 999999) {
+        
+        lastDigit = number % 10;       
+        firstDigit = number / 100000; 
+
+        
+        sum = firstDigit + lastDigit;
+
+       
+        printf("The sum of the first and last digits is: %d\n", sum);
+    } else {
+        printf("Please enter a valid six-digit number.\n");
+    }
+
+    return 0;
+}
