@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    float basicSalary, ta, pf, da, gs, ns;
+
+   
+    printf("Enter the basic salary: ");
+    scanf("%f", &basicSalary);
+
+  
+    ta = 0.1 * basicSalary;
+
+   
+    pf = 0.078 * basicSalary;
+
+   
+    da = 500;
+
+   
+    gs = basicSalary + ta + da;
+
+    
+    ns = gs - pf;
+
+   
+    printf("Travel Allowance (TA): %.2f\n", ta);
+    printf("Provident Fund (PF): %.2f\n", pf);
+    printf("Dearness Allowance (DA): %.2f\n", da);
+    printf("Gross Salary (GS): %.2f\n", gs);
+    printf("Net Salary (NS): %.2f\n", ns);
+
+    return 0;
+}

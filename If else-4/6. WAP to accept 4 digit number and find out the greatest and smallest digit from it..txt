@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int num, digit, maxDigit = 0, minDigit = 9;
+
+    printf("Enter a 4-digit number: ");
+    scanf("%d", &num);
+
+    while (num > 0) {
+        digit = num % 10;
+
+        if (digit > maxDigit) {
+            maxDigit = digit;
+        }
+        if (digit < minDigit) {
+            minDigit = digit;
+        }
+
+        num /= 10;
+    }
+
+    printf("Greatest digit: %d\n", maxDigit);
+    printf("Smallest digit: %d\n", minDigit);
+
+    return 0;
+}

@@ -1,0 +1,30 @@
+//c program to print ascii number from 91 to 96.
+
+#include <stdio.h>
+
+int main() {
+    for (int ascii_value = 91; ascii_value < 97; ++ascii_value) {
+        char character;
+
+        if (ascii_value == 91) {
+            character = 'A';
+        } else if (ascii_value == 92) {
+            character = 'B';
+        } else if (ascii_value == 93) {
+            character = 'C';
+        } else if (ascii_value == 94) {
+            character = 'D';
+        } else if (ascii_value == 95) {
+            character = 'E';
+        } else if (ascii_value == 96) {
+            character = 'F';
+        } else {
+            // Handle other cases if needed
+            character = '?';
+        }
+
+        printf("ASCII Value: %d, Character: %c\n", ascii_value, character);
+    }
+
+    return 0;
+}
