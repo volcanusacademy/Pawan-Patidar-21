@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+union EmployeeInfo {
+    float hourlyWage;
+    float monthlySalary;
+};
+
+struct Employee {
+    char name[50];
+    int employeeId;
+    char department[50];
+    union EmployeeInfo info; 
+};
+
+int main() {
+    struct Employee emp;
+
+    printf("Enter employee name: ");
+    fgets(emp.name, sizeof(emp.name), stdin);
+    printf("Enter employee ID: ");
+    scanf("%d", &emp.employeeId);
+    getchar(); 
+
+    printf("Enter department: ");
+    fgets(emp.department, sizeof(emp.department), stdin);
+   
+
+    printf("Choose type of information:\n");
+    printf("1. Hourly Wage\n");
+    printf("2. Monthly Salary\n");
+    int choice;
+    scanf("%d", &choice);
+
+    switch (choice) {
+        case 1:
+            printf("Enter hourly wage: ");
+            scanf("%f", &emp.info.hourlyWage);
+            break;
+        case 2:
+            printf("Enter monthly salary: ");
+            scanf("%f", &emp.info.monthlySalary);
+            break;
+        default:
+            printf("Invalid choice\n");
+            return 1;
+    }
+
+    printf("\nEmployee Details:\n");
+    printf("Name: %s", emp.name);
+    printf("Employee ID: %d\n", emp.employeeId);
+    printf("Department: %s", emp.department);
+   
+
+    switch (choice) {
+        case 1:
+            printf("Hourly Wage: $%.2f\n", emp.info.hourlyWage);
+            break;
+        case 2:
+            printf("Monthly Salary: $%.2f\n", emp.info.monthlySalary);
+            break;
+    }
+
+    return 0;
+}
